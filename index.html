@@ -1,4 +1,14 @@
-:var(--text);border-radius:9px;padding:10px}.settings-section input[type=color]{height:43px;padding:4px}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.small-btn{border:1px solid var(--line);background:transparent;color:var(--text);padding:10px 12px;border-radius:10px}.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--panel2);border:1px solid var(--line);padding:12px 16px;border-radius:12px;box-shadow:0 10px 35px #0006;z-index:30;display:none;font-size:13px;max-width:calc(100% - 30px)}.toast.show{display:block}.mobile-only{display:none}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="HomeSolve helps students explore homework questions with guided explanations across subjects.">
+<meta name="theme-color" content="#0b1020">
+<title>HomeSolve — Understand it. Solve it.</title>
+<style>
+:root{--bg:#0b1020;--panel:#121b30;--panel2:#17233b;--text:#edf3ff;--muted:#94a3bd;--line:#2a3955;--accent:#7c8cff;--accent2:#55dfc0;--danger:#ff7890;--radius:18px;--font:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 80% -10%,#252c61 0,transparent 35%),var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;transition:background .2s,color .2s}button,input,select,textarea{font:inherit}button{cursor:pointer}a{color:inherit}.shell{width:min(1180px,calc(100% - 36px));margin:auto}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12}.logo{font-weight:850;font-size:22px;letter-spacing:-.7px;display:flex;gap:10px;align-items:center}.logo-mark{display:grid;place-items:center;width:38px;height:38px;border-radius:13px;background:linear-gradient(135deg,var(--accent),#a66bff);color:white;font-weight:900;box-shadow:0 8px 25px #7c8cff33}.logo span{color:var(--accent)}.nav-actions{display:flex;gap:9px;align-items:center}.pill{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:11px;padding:10px 13px}.pill:hover{border-color:var(--accent)}.primary{border:0;background:linear-gradient(135deg,var(--accent),#9a79ff);color:#fff;border-radius:12px;padding:12px 17px;font-weight:750;box-shadow:0 8px 25px #7c8cff25}.primary:hover{filter:brightness(1.08);transform:translateY(-1px)}.hero{padding:52px 0 30px;text-align:center}.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #7c8cff55;background:#7c8cff14;color:#c9ceff;border-radius:99px;padding:7px 12px;font-size:12px;font-weight:750;letter-spacing:.7px;text-transform:uppercase}.dot{width:7px;height:7px;border-radius:50%;background:var(--accent2);box-shadow:0 0 12px var(--accent2)}h1{font-size:clamp(38px,6vw,66px);line-height:1.04;letter-spacing:-2.6px;margin:19px 0 15px}h1 em{font-style:normal;background:linear-gradient(90deg,var(--accent2),#aab0ff);-webkit-background-clip:text;background-clip:text;color:transparent}.lead{max-width:680px;margin:0 auto;color:var(--muted);font-size:17px;line-height:1.7}.setup{margin:28px auto 0;max-width:900px;text-align:left;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:17px;background:#ffffff08;border:1px solid #ffffff14;border-radius:18px}.field label{display:block;font-size:11px;color:var(--muted);font-weight:750;letter-spacing:.8px;text-transform:uppercase;margin:0 0 8px}.field select,.field input{width:100%;min-width:0;border:1px solid var(--line);border-radius:10px;padding:12px;background:var(--panel);color:var(--text);outline:none}.field select:focus,.field input:focus,textarea:focus{border-color:var(--accent)}.content{display:grid;grid-template-columns:minmax(0,1fr) 290px;gap:20px;padding:20px 0 60px;align-items:start}.workspace,.side-card{border:1px solid var(--line);background:linear-gradient(155deg,#ffffff08,transparent 60%),var(--panel);border-radius:var(--radius);overflow:hidden;box-shadow:0 20px 60px #00000018}.workspace-head{padding:20px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:12px}.workspace-head h2{font-size:17px;margin:0}.workspace-head p{font-size:12px;color:var(--muted);margin:5px 0 0}.counter{border:1px solid #55dfc033;background:#55dfc010;color:var(--accent2);border-radius:99px;padding:8px 11px;font-size:12px;white-space:nowrap}.counter strong{font-size:14px}.compose{padding:22px}.subject-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}.subject{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:99px;padding:8px 12px;font-size:12px}.subject.active{background:color-mix(in srgb,var(--accent) 17%,transparent);border-color:var(--accent);color:var(--text)}textarea{width:100%;min-height:150px;resize:vertical;border:1px solid var(--line);border-radius:14px;background:var(--bg);color:var(--text);padding:16px;outline:none;line-height:1.6}.upload-row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:13px 0 17px;flex-wrap:wrap}.upload-label{display:inline-flex;align-items:center;gap:8px;color:var(--muted);font-size:13px;cursor:pointer}.upload-label input{display:none}.file-name{font-size:12px;color:var(--accent2)}.send-row{display:flex;justify-content:space-between;align-items:center;gap:12px}.hint{color:var(--muted);font-size:12px;line-height:1.5}.response{display:none;margin-top:20px;padding:19px;border:1px solid #55dfc033;border-radius:14px;background:#55dfc008;line-height:1.7}.response.show{display:block}.response h3{margin:0 0 9px;font-size:15px}.response p{color:var(--muted);margin:7px 0}.demo-tag{display:inline-block;color:#ffd48a;background:#ffd48a14;border:1px solid #ffd48a30;border-radius:7px;padding:4px 7px;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.7px;margin-bottom:9px}.side{display:grid;gap:15px}.side-card{padding:19px}.side-card h3{margin:0 0 13px;font-size:14px}.usage-num{font-size:30px;font-weight:850;letter-spacing:-1px}.usage-num span{font-size:14px;color:var(--muted);font-weight:500;letter-spacing:0}.progress{height:6px;background:var(--line);border-radius:99px;overflow:hidden;margin:12px 0}.progress div{height:100%;width:0;background:linear-gradient(90deg,var(--accent),var(--accent2));transition:width .2s}.side-card p{font-size:12px;line-height:1.6;color:var(--muted);margin:9px 0 0}.price{font-size:25px;font-weight:850;margin:4px 0}.price small{font-size:12px;font-weight:500;color:var(--muted)}.feature-list{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:10px;color:var(--muted);font-size:12px}.feature-list li:before{content:"✓";color:var(--accent2);font-weight:900;margin-right:8px}.footer{border-top:1px solid #ffffff12;padding:22px 0 32px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}.notice{margin:0 0 22px;padding:13px 15px;border:1px solid #ffd48a35;background:#ffd48a0b;border-radius:12px;color:#e7d3a7;font-size:12px;line-height:1.6}.modal-backdrop{position:fixed;inset:0;background:#020510c9;backdrop-filter:blur(7px);z-index:10;display:none;justify-content:flex-end}.modal-backdrop.open{display:flex}.settings{width:min(430px,100%);height:100%;overflow:auto;background:var(--panel);border-left:1px solid var(--line);padding:24px}.settings-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}.settings-head h2{margin:0}.close{font-size:22px}.settings-section{padding:17px 0;border-top:1px solid var(--line)}.settings-section h3{font-size:11px;letter-spacing:1px;color:var(--muted);text-transform:uppercase;margin:0 0 13px}.settings-section label{display:block;font-size:12px;color:var(--muted);margin:12px 0 7px}.settings-section select,.settings-section input[type=color]{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--text);border-radius:9px;padding:10px}.settings-section input[type=color]{height:43px;padding:4px}.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}.small-btn{border:1px solid var(--line);background:transparent;color:var(--text);padding:10px 12px;border-radius:10px}.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--panel2);border:1px solid var(--line);padding:12px 16px;border-radius:12px;box-shadow:0 10px 35px #0006;z-index:30;display:none;font-size:13px;max-width:calc(100% - 30px)}.toast.show{display:block}.mobile-only{display:none}
 @media(max-width:850px){.content{grid-template-columns:1fr}.side{grid-template-columns:repeat(2,minmax(0,1fr))}.setup{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:560px){.shell{width:calc(100% - 24px)}.nav{height:66px}.logo{font-size:19px}.nav-actions .pill{font-size:0;padding:10px}.nav-actions .pill:after{content:"⚙";font-size:17px}.hero{padding:35px 0 20px}h1{letter-spacing:-1.7px}.lead{font-size:14px}.setup{padding:12px;gap:10px}.field select{padding:11px 8px;font-size:12px}.workspace-head{padding:16px}.compose{padding:15px}.side{grid-template-columns:1fr}.send-row{align-items:stretch;flex-direction:column}.send-row .primary{width:100%}.footer{flex-direction:column}.notice{font-size:11px}}
 </style>
@@ -36,4 +46,84 @@
     </div>
     <aside class="side">
       <div class="side-card"><h3>Your free plan</h3><div class="usage-num"><span id="remaining">10</span> <span>/ 10 questions left</span></div><div class="progress"><div id="progressBar"></div></div><p>Your demo usage is stored in this browser only. It is not a secure account-based limit.</p></div>
-      <div class="side-card"><h3>HomeSolve Plus</h3><div class="price">£1.99 <small>/ month</
+      <div class="side-card"><h3>HomeSolve Plus</h3><div class="price">£1.99 <small>/ month</small></div><p>More questions, photo questions, and learning support.</p><ul class="feature-list"><li>More questions</li><li>Ask with photos</li><li>Step-by-step explanations</li><li>Cancel any time (planned)</li></ul><button class="primary" style="width:100%;margin-top:16px" id="upgrade">Explore Plus</button><p>Subscription checkout is not connected in this demo.</p></div>
+      <div class="side-card"><h3>Made for your level</h3><p id="profileSummary">Secondary school · Year 9 · United Kingdom</p><p>Update your country and year above to tailor your future AI explanations.</p></div>
+    </aside>
+  </section>
+  <footer class="footer"><span>© <span id="yearNow"></span> HomeSolve</span><span>Learn the steps, not just the answer.</span><span>Privacy · Terms · Contact (coming soon)</span></footer>
+</main>
+<div class="modal-backdrop" id="settingsBackdrop">
+  <aside class="settings" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+    <div class="settings-head"><h2 id="settingsTitle">Make it yours</h2><button class="pill close" id="settingsClose" aria-label="Close settings">×</button></div>
+    <div class="settings-section"><h3>Theme</h3><label for="theme">Choose a theme</label><select id="theme"><option value="dark">Midnight (default)</option><option value="ocean">Deep ocean</option><option value="forest">Forest</option><option value="plum">Night plum</option><option value="light">Soft light</option><option value="paper">Warm paper</option></select>
+    <div class="two"><div><label for="accent">Accent colour</label><input type="color" id="accent" value="#7c8cff"></div><div><label for="font">Font</label><select id="font"><option value="system">System / modern</option><option value="arial">Arial</option><option value="georgia">Georgia</option><option value="mono">Monospace</option><option value="rounded">Rounded</option></select></div></div>
+    <label for="density">Interface style</label><select id="density"><option value="rounded">Rounded cards</option><option value="sharp">Sharper corners</option><option value="compact">Compact spacing</option></select></div>
+    <div class="settings-section"><h3>Preferences</h3><label for="answerStyle">Preferred explanation style</label><select id="answerStyle"><option>Step by step</option><option>Short and simple</option><option>Detailed explanation</option><option>Hints first</option></select><button class="small-btn" id="resetUsage" style="margin-top:12px">Reset demo usage</button><p>Reset only affects this browser demo. Real usage limits must be managed securely on a server.</p></div>
+    <button class="primary" id="saveSettings" style="width:100%;margin-top:10px">Save appearance</button>
+  </aside>
+</div>
+<div class="toast" id="toast" role="status"></div>
+<script>
+(()=> {
+ const $=id=>document.getElementById(id);
+ const defaults={theme:'dark',accent:'#7c8cff',font:'system',density:'rounded'};
+ let settings={...defaults}; let subject='Maths'; let photoFile=null;
+ const palettes={
+ dark:{bg:'#0b1020',panel:'#121b30',panel2:'#17233b',text:'#edf3ff',muted:'#94a3bd',line:'#2a3955'},
+ ocean:{bg:'#071b29',panel:'#0d2a3a',panel2:'#12374a',text:'#e5f7ff',muted:'#8cb4c8',line:'#245064'},
+ forest:{bg:'#0c1b16',panel:'#142920',panel2:'#1a372b',text:'#e5f8ec',muted:'#95b7a2',line:'#2b5140'},
+ plum:{bg:'#191022',panel:'#261832',panel2:'#342044',text:'#f7eaff',muted:'#b9a0c8',line:'#4b3260'},
+ light:{bg:'#f0f4fb',panel:'#ffffff',panel2:'#e8eef9',text:'#1b2940',muted:'#66748a',line:'#d7dfed'},
+ paper:{bg:'#f4efe5',panel:'#fffaf1',panel2:'#eee5d6',text:'#332d26',muted:'#827669',line:'#ddd0be'}
+ };
+ function applyAppearance(){const p=palettes[settings.theme]||palettes.dark;const r=document.documentElement;Object.entries(p).forEach(([k,v])=>r.style.setProperty('--'+k,v));r.style.setProperty('--accent',settings.accent);r.style.setProperty('--font',({system:'Inter,ui-sans-serif,system-ui,sans-serif',arial:'Arial,sans-serif',georgia:'Georgia,serif',mono:'ui-monospace,Consolas,monospace',rounded:'"Trebuchet MS",system-ui,sans-serif'})[settings.font]||'system-ui,sans-serif');r.style.setProperty('--radius',settings.density==='sharp'?'6px':settings.density==='compact'?'11px':'18px');document.querySelectorAll('.workspace,.side-card').forEach(el=>el.style.padding=settings.density==='compact'?'':'');}
+ function showToast(msg){$('toast').textContent=msg;$('toast').classList.add('show');clearTimeout(showToast.t);showToast.t=setTimeout(()=>$('toast').classList.remove('show'),3200)}
+ function getUsed(){return Math.max(0,Math.min(10,Number(localStorage.getItem('homesolve_demo_used')||0)))}
+ function updateUsage(){let left=10-getUsed();$('remaining').textContent=left;$('headerRemaining').textContent=left;$('progressBar').style.width=(getUsed()/10*100)+'%';$('solve').textContent=left?'✦ Help me solve this':'Unlock more questions';$('profileSummary').textContent=$('level').value+' · '+$('year').value+' · '+$('country').value;}
+ function selectSubject(s){subject=s;document.querySelectorAll('.subject').forEach(b=>b.classList.toggle('active',b.dataset.subject===s));}
+ document.querySelectorAll('.subject').forEach(b=>b.addEventListener('click',()=>selectSubject(b.dataset.subject)));
+ $('photo').addEventListener('change',e=>{photoFile=e.target.files[0]||null;$('fileName').textContent=photoFile?photoFile.name:'No photo attached';if(photoFile&&photoFile.size>8*1024*1024){showToast('Please choose an image smaller than 8 MB.');$('photo').value='';photoFile=null;$('fileName').textContent='No photo attached';}});
+ $('solve').addEventListener('click', async ()=>{
+   const question=$('question').value.trim();
+   const left=10-getUsed();
+   if(left<=0){showToast('You have used the 10 free demo questions. Paid upgrades are not connected yet.');$('upgrade').focus();return;}
+   if(!question&&!photoFile){showToast('Type a question or attach a photo first.');return;}
+   const button=$('solve'); const resp=$('response');
+   button.disabled=true; button.textContent='✦ Working on your question…';
+   resp.classList.add('show');
+   resp.innerHTML='<p>HomeSolve is thinking…</p>';
+   try {
+     let imageData=null;
+     if(photoFile){
+       imageData=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(String(reader.result));reader.onerror=()=>reject(new Error('Could not read that image. Please try another photo.'));reader.readAsDataURL(photoFile);});
+     }
+     const response=await fetch('/.netlify/functions/solve',{
+       method:'POST',headers:{'Content-Type':'application/json'},
+       body:JSON.stringify({question,imageData,country:$('country').value,level:$('level').value,year:$('year').value,subject,language:$('language').value,answerStyle:$('answerStyle').value})
+     });
+     const data=await response.json().catch(()=>({error:'The server returned an unreadable response.'}));
+     if(!response.ok) throw new Error(data.error||'HomeSolve could not answer right now.');
+     localStorage.setItem('homesolve_demo_used',String(getUsed()+1)); updateUsage();
+     const answer=String(data.answer||'No answer was returned.');
+     const safeAnswer=answer.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+     resp.innerHTML='<span class="demo-tag">AI explanation</span><h3>Let’s work through it</h3><p><strong>Your subject:</strong> '+subject+' · '+$('level').value+' · '+$('year').value+'</p><div style="white-space:pre-wrap;line-height:1.75">'+safeAnswer+'</div>';
+   } catch(error) {
+     resp.innerHTML='<h3>We could not answer that yet</h3><p>'+String(error.message||'Something went wrong.').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))+'</p><p>Check that the Netlify function is deployed and OPENAI_API_KEY is set in Netlify environment variables.</p>';
+   } finally {
+     button.disabled=false; updateUsage();
+   }
+   resp.scrollIntoView({behavior:'smooth',block:'nearest'});
+ });
+ $('country').addEventListener('change',updateUsage);$('level').addEventListener('change',updateUsage);$('year').addEventListener('change',updateUsage);
+ $('settingsOpen').onclick=()=>$('settingsBackdrop').classList.add('open');$('settingsClose').onclick=()=>$('settingsBackdrop').classList.remove('open');$('settingsBackdrop').addEventListener('click',e=>{if(e.target===$('settingsBackdrop'))$('settingsBackdrop').classList.remove('open')});
+ $('theme').value=settings.theme;$('accent').value=settings.accent;$('font').value=settings.font;$('density').value=settings.density;
+ $('saveSettings').onclick=()=>{settings={theme:$('theme').value,accent:$('accent').value,font:$('font').value,density:$('density').value};try{localStorage.setItem('homesolve_appearance',JSON.stringify(settings))}catch(e){}applyAppearance();$('settingsBackdrop').classList.remove('open');showToast('Appearance saved on this device.');};
+ $('resetUsage').onclick=()=>{localStorage.removeItem('homesolve_demo_used');updateUsage();showToast('Demo usage reset on this device.');};
+ function upgradeNotice(){showToast('Checkout is not connected yet. £1.99/month is a planned price; no payment will be taken.');}
+ $('upgrade').onclick=upgradeNotice;$('planButton').onclick=upgradeNotice;
+ try{const saved=JSON.parse(localStorage.getItem('homesolve_appearance')||'null');if(saved)settings={...defaults,...saved};}catch(e){}
+ $('theme').value=settings.theme;$('accent').value=settings.accent;$('font').value=settings.font;$('density').value=settings.density;applyAppearance();updateUsage();$('yearNow').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
